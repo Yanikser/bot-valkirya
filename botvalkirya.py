@@ -37,7 +37,7 @@ async def ask_ai(chat_id: int, user_name: str, prompt: str) -> str:
         "Content-Type": "application/json"
     }
     payload = {
-        "model": "llama-3.3-70b-versatile",
+        "model": "openai/gpt-oss-120b",
         "messages": [{"role": "system", "content": SYSTEM_PROMPT}] + history,
         "temperature": 0.8,
         "max_tokens": 500
